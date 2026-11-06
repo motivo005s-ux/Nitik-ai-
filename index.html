@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Nitik AI — your all-in-one AI assistant">
+  <title>Nitik AI</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">N</div><div><b>Nitik AI</b><small>YOUR AI ASSISTANT</small></div></div>
+      <button class="new-chat" id="newChat">＋ New chat</button>
+      <div class="side-label">EXPLORE</div>
+      <button class="nav-item active" data-mode="General">✦ General AI</button>
+      <button class="nav-item" data-mode="Study">▤ Study helper</button>
+      <button class="nav-item" data-mode="Writing">✎ Writing assistant</button>
+      <button class="nav-item" data-mode="Coding">⌘ Coding helper</button>
+      <button class="nav-item" data-mode="Business">▣ Business helper</button>
+      <button class="nav-item" data-mode="Ideas">◇ Ideas & planning</button>
+      <div class="sidebar-bottom"><span class="status-dot"></span> Demo mode <small>Connect an AI provider to enable live AI.</small></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-brand" id="menuBtn" aria-label="Open menu">☰</button>
+        <div><strong id="modeTitle">General AI</strong><small>Helpful answers, ideas and tools</small></div>
+        <button class="install-btn" id="installBtn" hidden>Install app</button>
+      </header>
+
+      <section class="welcome" id="welcome">
+        <div class="sparkle">✦</div>
+        <h1>What can I help you with?</h1>
+        <p>Ask Nitik AI anything. Start with a suggestion below.</p>
+        <div class="suggestions">
+          <button data-prompt="Explain photosynthesis in simple Hindi and English.">📚 Explain a topic</button>
+          <button data-prompt="Help me create a simple business growth plan.">📈 Grow my business</button>
+          <button data-prompt="Write a professional email for me.">✍️ Write something</button>
+          <button data-prompt="Help me make a simple website.">💻 Build a website</button>
+        </div>
+      </section>
+
+      <section class="chat" id="chat" aria-live="polite"></section>
+
+      <form class="composer" id="chatForm">
+        <textarea id="prompt" rows="1" placeholder="Message Nitik AI..." aria-label="Message Nitik AI"></textarea>
+        <div class="composer-foot"><span id="modeHint">General mode · Demo responses</span><button type="submit" id="sendBtn">Send ↑</button></div>
+      </form>
+      <p class="disclaimer">Nitik AI can make mistakes. Check important information. Do not enter passwords or private information.</p>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
